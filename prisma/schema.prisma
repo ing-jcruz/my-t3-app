@@ -15,3 +15,10 @@ model Products {
   inventory Int
   price Decimal
 }
+
+model ShoppingCart {
+  id Int @id @default(autoincrement())
+  product_id String
+  cantidad Int
+  subtotal Decimal
+}
