@@ -19,6 +19,7 @@ model Products {
 model ShoppingCart {
   id Int @id @default(autoincrement())
   product_id Int
+  name String
   quantity Int
   subtotal Decimal
 }
