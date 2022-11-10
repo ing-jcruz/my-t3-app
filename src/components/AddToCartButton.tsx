@@ -2,12 +2,13 @@ import { trpc } from "../utils/trpc";
 
 type AddToCartPropsButton = {
   product_id: number;
+  name: string;
   price: number;
   inventory: number;
   quantityToAdd: number;
 }
 
-const AddToCartButton: React.FC<AddToCartPropsButton> = ({ product_id, price, inventory, quantityToAdd }) => {
+const AddToCartButton: React.FC<AddToCartPropsButton> = ({ product_id, name, price, inventory, quantityToAdd }) => {
   const adds = trpc.shoppingCart.create.useMutation();
 
   const validationToAddToCart = () => {
@@ -19,6 +20,7 @@ const AddToCartButton: React.FC<AddToCartPropsButton> = ({ product_id, price, in
       try {
         adds.mutateAsync({
           product_id,
+          name,
           quantity: quantityToAdd,
           subtotal: price * quantityToAdd
         });
