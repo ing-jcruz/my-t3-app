@@ -87,7 +87,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
   }
 
   return (
-    <div className="container mx-auto flex min-h-screen flex-col items-center justify-center p-4">
+    <div className="mx-auto flex min-h-screen flex-col items-center justify-center p-4">
       <span>{notification}</span>
       <form className="w-full max-w-sm"
         onSubmit={handleSubmit}>
@@ -96,7 +96,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
             htmlFor="name">
             Nombre *
           </label>
-          <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          <input className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
             id="name"
             type="text"
             value={productName}
@@ -112,7 +112,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
             htmlFor="slug">
             Slug
           </label>
-          <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          <input className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
             id="slug"
             type="text"
             value={productSlug}
@@ -125,7 +125,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
             htmlFor="description">
             Descripción *
           </label>
-          <textarea className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          <textarea className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
             id="description"
             rows={5}
             value={productDescription}
@@ -139,7 +139,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
               htmlFor="inventory">
               Inventario *
             </label>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            <input className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
               id="inventory"
               type="number"
               min={0}
@@ -153,11 +153,11 @@ const ProductForm: React.FC<ProductFormProps> = ({
               htmlFor="price">
               Precio *
             </label>
-            <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            <input className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none"
               id="price"
               type="number"
               min={0}
-              step={0.01}
+              step="any"
               value={productPrice}
               onChange={({ target }) => setProductPrice(Number(target.value))}
               required
@@ -165,7 +165,7 @@ const ProductForm: React.FC<ProductFormProps> = ({
           </div>
         </div>
         <div className="flex items-center justify-end">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
             type="submit">
             Guardar
           </button>

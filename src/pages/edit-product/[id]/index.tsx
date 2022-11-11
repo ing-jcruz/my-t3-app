@@ -6,8 +6,8 @@ import ProductForm from "../../../components/ProductForm";
 
 const EditProduct: NextPage = () => {
   const router = useRouter();
-  let id = router.query.id || 0;
-  const { data } = trpc.product.getById.useQuery({ id: Number(id) });
+  let id = Number(router.query.id) || 0;
+  const { data } = trpc.product.getById.useQuery({ id });
 
   return (
     <>
