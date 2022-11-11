@@ -20,7 +20,7 @@ const DeleteProductButton: React.FC<DeleteProductButtonProps> = ({ id }) => {
   }
 
   return (
-    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2"
+    <button className="bg-red-500 hover:bg-red-700 text-white py-2 px-4 rounded"
       onClick={deleteProduct}>
       <svg xmlns="http://www.w3.org/2000/svg"
         fill="none"

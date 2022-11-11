@@ -13,7 +13,7 @@ const ViewProductButton: React.FC<ViewProductButtonProps> = ({ id }) => {
   }
 
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2"
+    <button className="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded"
       onClick={viewProduct}>
       <svg xmlns="http://www.w3.org/2000/svg"
         fill="none"

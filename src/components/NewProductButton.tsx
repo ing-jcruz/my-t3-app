@@ -9,7 +9,7 @@ const NewProductButton = () => {
   }
 
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2"
+    <button className="flex text-white py-2 px-4 rounded"
       onClick={newProduct}>
       <svg xmlns="http://www.w3.org/2000/svg"
         fill="none" viewBox="0 0 24 24"
@@ -20,6 +20,7 @@ const NewProductButton = () => {
           strokeLinejoin="round"
           d="M12 4.5v15m7.5-7.5h-15" />
       </svg>
+      Nuevo
     </button>
   );
 }

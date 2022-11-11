@@ -31,7 +31,7 @@ const AddToCartButton: React.FC<AddToCartPropsButton> = ({ product_id, name, pri
   }
 
   return (
-    <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2"
+    <button className="bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded"
       onClick={addToCart}>
       <svg xmlns="http://www.w3.org/2000/svg"
         fill="none"
