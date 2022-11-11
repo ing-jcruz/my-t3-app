@@ -23,14 +23,14 @@ const ProductCard: React.FC<ProductCardProps> = ({
   const [quantity, setQuantity] = useState(0);
 
   return (
-    <div className="group relative">
-      <h3>{name}</h3>
+    <div className="group relative border p-4">
+      <h3 className="text-gray-800 font-bold">{name}</h3>
       <p className="mt-1 text-sm text-gray-500">{slug}</p>
       <p className="mt-1 text-sm text-gray-500">{description}</p>
       <p className="mt-1 text-sm text-gray-500">Inventario: {inventory}</p>
-      <p className="text-sm font-medium text-gray-900">{formatPrice(price)}</p>
+      <p className="mt-1 text-sm text-gray-800 font-medium">{formatPrice(price)}</p>
       <div>
-        <input className="w-20 mt-4 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        <input className="border rounded w-full py-2 px-3 text-gray-700 focus:outline-none mt-2"
           id="quantity"
           type="number"
           min={0}
@@ -39,10 +39,11 @@ const ProductCard: React.FC<ProductCardProps> = ({
           onChange={({ target }) => setQuantity(Number(target.value))}
         />
       </div>
-      <div className="flex items-center justify-end pt-4 pb-2">
+      <div className="flex items-center justify-end gap-2 mt-2">
         <ViewProductButton id={id} />
         <AddToCartButton
           product_id={id}
+          name={name}
           price={price}
           inventory={inventory}
           quantityToAdd={quantity} />
